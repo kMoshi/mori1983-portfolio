@@ -4,6 +4,7 @@ import "../styles/reset.css";
 import Header from "../components/Header.astro";
 import Hamburger from "../components/Hamburger.astro";
 import Footer from "../components/Footer.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "私について";
 ---
@@ -21,7 +22,7 @@ const pageTitle = "私について";
     <Header />
 
     <h1>{pageTitle}</h1>
-    <img src="https://mori1983-portfolio.netlify.app/beauty-pc.jpg" alt="" />
+    <img class="circle" src="https://mori1983-portfolio.netlify.app/beauty-pc.jpg" alt="" />
 
     <Footer />
     <script>
@@ -42,10 +43,6 @@ const pageTitle = "私について";
     ></script>
   </body>
 </html>
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "test Page";
----
-
 <BaseLayout pageTitle={pageTitle}>
   <h2>ブログのサブタイトル</h2>
 </BaseLayout>
