@@ -42,3 +42,10 @@ const pageTitle = "私について";
     ></script>
   </body>
 </html>
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "test Page";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>ブログのサブタイトル</h2>
+</BaseLayout>

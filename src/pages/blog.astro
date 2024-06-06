@@ -1,9 +1,5 @@
 ---
-import "../styles/global.css";
-// import "../styles/reset.css";
-import Header from "../components/Header.astro";
-import Hamburger from "../components/Hamburger.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "私について";
 ---
@@ -21,6 +17,7 @@ const pageTitle = "私について";
   <body>
     <Hamburger />
     <Header />
+<BaseLayout pageTitle={pageTitle}>
 
     <h1>{pageTitle}</h1>
     <h1>私のzezeeAstro学習ブログ</h1>
@@ -31,9 +28,4 @@ const pageTitle = "私について";
       <li><a href="/posts/post-3/">記事3</a></li>
     </ul>
 
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+</BaseLayout>
