@@ -80,3 +80,11 @@ h1 {
         display: none;
     }
 }
+
+.circle{
+    width: 240px;
+    height: 320px;
+    clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
+    object-fit: cover;
+    position: relative;
+}

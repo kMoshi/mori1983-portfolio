@@ -79,4 +79,13 @@ h1 {
     display: none;
   }
 }
+.circle {
+  width: 240px;
+  height: 320px;
+  -webkit-clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
+          clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
 /*# sourceMappingURL=global.css.map */
