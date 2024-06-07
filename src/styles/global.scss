@@ -70,14 +70,23 @@ a {
         position: absolute;
         display: flex;
         margin-left: #{(220 / 10)}rem;
-        margin-top: #{(24 / 10)}rem;
-        gap: 1rem;
+        margin-top: #{(20 / 10)}rem;
         li {
             display: inline-block;
             list-style: none;
             padding-right: #{(20 / 10)}rem;
             &:last-child {
                 padding-right: 0;
+            }
+            a{
+                display: block;
+                padding: .4rem 1rem;
+                border-radius: 12px;
+                &:hover{
+                    opacity: .8;
+                    transition: .3s;
+                    background-color: rgb(211, 211, 211);
+                }
             }
         }
     }
@@ -99,19 +108,29 @@ a {
 
 // top-contents
 .block {
-    .mv {
-        .slide {
+    &.mv {
+        .swiper {
+            width: 600px;
+            height: 300px;
         }
     }
-    .news {
+    &.news {
+        
     }
-    .items {
+    &.items {
+        
     }
-    .sns {
+    &.sns {
+        .inner{
+            display: flex;
+        }
     }
-    .store {
+    &.store {
+        
     }
 }
+
+
 
 // footer
 .footer {
@@ -122,7 +141,7 @@ a {
 
 .circle {
     width: 240px;
-    height: 1320px;
+    height: 320px;
     clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
     object-fit: cover;
     position: relative;

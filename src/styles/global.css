@@ -353,8 +353,7 @@ a {
   position: absolute;
   display: flex;
   margin-left: 22rem;
-  margin-top: 2.4rem;
-  gap: 1rem;
+  margin-top: 2rem;
 }
 .header__gnav li {
   display: inline-block;
@@ -363,6 +362,16 @@ a {
 }
 .header__gnav li:last-child {
   padding-right: 0;
+}
+.header__gnav li a {
+  display: block;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+}
+.header__gnav li a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  background-color: rgb(211, 211, 211);
 }
 .header__subnav {
   position: absolute;
@@ -379,13 +388,20 @@ a {
   padding-left: 0;
 }
 
+.block.mv .swiper {
+  width: 600px;
+  height: 300px;
+}
+.block.sns .inner {
+  display: flex;
+}
 .footer__inner {
   color: red;
 }
 
 .circle {
   width: 240px;
-  height: 1320px;
+  height: 320px;
   -webkit-clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
           clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
   -o-object-fit: cover;
