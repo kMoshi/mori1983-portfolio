@@ -1,12 +1,7 @@
 ---
-// import "../styles/global.css";
+import "../styles/global.css";
 import "../styles/reset.css";
-import Header from "../components/Header.astro";
-import Hamburger from "../components/Hamburger.astro";
-import Footer from "../components/Footer.astro";
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const pageTitle = "私について";
+const pageTitle = "UrbanBlues";
 ---
 
 <html lang="ja">
@@ -18,15 +13,61 @@ const pageTitle = "私について";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Hamburger />
-    <Header />
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo"><h1>{pageTitle}</h1></div>
+        <div class="header__gnav">
+          <ul>
+            <li><a href="#">ALL</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">KIDS</a></li>
+          </ul>
+        </div>
+        <div class="header__subnav">
+          <ul>
+            <li><a href="#">search</a></li>
+            <li><a href="#">recommend</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">mypage</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-    <h1>{pageTitle}</h1>
-    <img class="circle" src="https://mori1983-portfolio.netlify.app/beauty-pc.jpg" alt="" />
+    <div class="block mv">
+      <div class="mv__contents">
+        MONTHLY 202405 A HOLE ―FOREST― 新しいデニムコレクションを完全受注生産で
+        お届けします。
+        <img src="" alt="" />
+        <button class="btn__view">MORE</button>
+      </div>
+      <div class="mv__slide"></div>
+    </div>
 
-    <Footer />
+    <div class="block news"></div>
+
+    <div class="block items"></div>
+
+    <div class="block sns">
+      <!-- <img
+        class="circle"
+        src="https://images.unsplash.com/photo-1603722796411-de70d5b992e3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+      /> -->
+    </div>
+
+    <div class="block store">
+      <div class="store__inner">
+
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__inner"></div>
+    </footer>
+
     <script>
-      import "../scripts/menu.js";
       const lenis = new Lenis();
 
       function raf(time) {
@@ -43,6 +84,3 @@ const pageTitle = "私について";
     ></script>
   </body>
 </html>
-<BaseLayout pageTitle={pageTitle}>
-  <h2>ブログのサブタイトル</h2>
-</BaseLayout>

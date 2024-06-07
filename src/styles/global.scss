@@ -1,86 +1,134 @@
+@import "./ress";
+@import "./var";
+
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+    font-size: 62.5%;
+    scroll-padding-top: 90px;
 }
 
 body {
-    margin: 0 auto;
+    font-family: $font-jp-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    color: $color-black;
+    background-color: $default-color;
+    font-size: #{(16 / 10)}rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+img[src$=".svg"] {
     width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
+    height: auto;
 }
 
-* {
-    box-sizing: border-box;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: normal;
 }
 
-h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-}
-
-/* ナビゲーションのスタイル */
-.hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-}
-
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-}
-
-.nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
-}
-
-.nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
+a {
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color: #ff9776;
-}
+// header
+.header {
+    width: 100%;
+    //height: #{(110 / 10)}rem;
+    height: #{(90 / 10)}rem;
+    background: $color-white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: #{(13 / 10)}rem #{(40 / 10)}rem 0;
+    z-index: 3000;
+    margin: #{(5 / 10)}rem 0 #{(5 / 10)}rem;
 
-.expanded {
-    display: unset;
-}
+    /*@at-root .small-header & {
+		height: #{(90 / 10)}rem;
+		padding: #{(18 / 10)}rem 0 0;
+	}*/
 
-@media screen and (min-width: 636px) {
-    .nav-links {
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
+    &__inner {
+        width: 1024px;
+        margin: 0 auto;
+        position: relative;
     }
-
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
+    &__logo {
+        position: absolute;
+        margin-top: #{(16 / 10)}rem;
     }
-
-    .hamburger {
-        display: none;
+    &__gnav {
+        position: absolute;
+        display: flex;
+        margin-left: #{(220 / 10)}rem;
+        margin-top: #{(24 / 10)}rem;
+        gap: 1rem;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding-right: #{(20 / 10)}rem;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    &__subnav {
+        position: absolute;
+        display: flex;
+        margin-top: #{(24 / 10)}rem;
+        right: 0;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding-left: #{(20 / 10)}rem;
+            &:last-child {
+                padding-left: 0;
+            }
+        }
     }
 }
 
+// top-contents
+.block {
+    .mv {
+        .slide {
+        }
+    }
+    .news {
+    }
+    .items {
+    }
+    .sns {
+    }
+    .store {
+    }
+}
+
+// footer
+.footer {
+    &__inner {
+        color: red;
+    }
+}
+
+.circle {
+    width: 240px;
+    height: 1320px;
+    clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
+    object-fit: cover;
+    position: relative;
+}
+
+// lenis
 html.lenis,
 html.lenis body {
     height: auto;
@@ -100,11 +148,4 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
     pointer-events: none;
-}
-.circle{
-    width: 240px;
-    height: 320px;
-    clip-path: inset(0 0 round 9999px 9999px 9999px 9999px);
-    object-fit: cover;
-    position: relative;
 }

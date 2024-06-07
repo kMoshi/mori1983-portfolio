@@ -1,37 +1,7 @@
 ---
-import "../styles/global.css";
-// import "../styles/reset.css";
-import Header from "../components/Header.astro";
-import Hamburger from "../components/Hamburger.astro";
-import Footer from "../components/Footer.astro";
+// import "../styles/global.css";
+// import Header from "../components/Header.astro";
+// import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
 ---
-
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Hamburger />
-    <Header />
-
-    <h1>{pageTitle}</h1>
-
-    <slot />
-    <img
-      class="circle"
-      src="https://images.unsplash.com/photo-1603722796411-de70d5b992e3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt=""
-    />
-
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
